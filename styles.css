@@ -15,6 +15,7 @@ header {
     background-color: #24292e;
     color: white;
     padding: 30px;
+    height: 100vh;
 
 }
 
@@ -122,4 +123,51 @@ main {
 
 #pagination span {
     font-size: 16px;
+}
+
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+    }
+    header {
+        padding: 20px;
+        height: auto;
+    }
+
+    .avatar img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .info h1 {
+        font-size: 20px;
+    }
+
+    .info p {
+        font-size: 14px;
+    }
+
+    aside {
+        width: 200px;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    #repo-list li {
+        padding: 10px;
+    }
+
+    #repo-list li span {
+        font-size: 14px;
+    }
+
+    #pagination {
+        flex-direction: column;
+    }
+
+    #pagination button {
+        margin-bottom: 10px;
+    }
 }
