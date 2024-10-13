@@ -50,7 +50,8 @@ function exibirRepos(repos) {
     for (let i = indiceInicial; i < indiceFinal; i++) {
         const repo = repos[i];
         const listItem = document.createElement('li');
-        listItem.innerHTML = `<span><a href="${repo.html_url || repo.web_url}" target="_blank">${repo.name || repo.path}</a></span><span>${repo.updated_at ? `Atualizado em: ${new Date(repo.updated_at || repo.last_activity_at).toLocaleDateString()}` : ''}</span>`;
+        const repoName = repo.name;
+        listItem.innerHTML = `<span><a href="readme.html?repo=${repoName}">${repo.name || repo.path}</a></span><span>${repo.updated_at ? `Atualizado em: ${new Date(repo.updated_at || repo.last_activity_at).toLocaleDateString()}` : ''}</span>`;
         repoList.appendChild(listItem);
     }
 

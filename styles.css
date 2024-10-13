@@ -19,7 +19,6 @@ header {
     background-color: #24292e;
     color: white;
     padding: 30px;
-    height: 60rem;
 
 }
 
@@ -72,7 +71,31 @@ nav ul li a {
 
 main {
     flex: 1;
-    padding: 20px;
+    padding: 20px !important;
+}
+
+.nav-readme{
+    position: fixed;
+    background-color: #333;
+    padding: 10px 0;
+}
+
+.nav-readme a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.main-readme{
+    padding: 0 52px !important;
+
+}
+
+#readme-content{
+    padding: 30px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 #repo-list {
