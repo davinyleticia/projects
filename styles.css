@@ -280,4 +280,7 @@ footer p {
     li {
         flex-direction: column;
     }
+    .nav-readme {
+        width: 100%;
+    }
 }
