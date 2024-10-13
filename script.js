@@ -2,6 +2,7 @@ const githubUsername = 'davinyleticia'; // Substitua pelo seu usuário do GitHub
 const gitlabUsername = 'davinyleticia'; // Substitua pelo seu usuário do GitLab
 const reposPorPagina = 15;
 let paginaAtual = 1;
+const topico = 'projects'; // Tópico a ser filtrado
 
 async function buscarRepos() {
     // Buscar repositórios do GitHub
@@ -18,7 +19,20 @@ async function buscarRepos() {
 
     // Combinar repositórios de ambas as plataformas
     const todosRepos = [...githubData, ...gitlabData];
-    exibirRepos(todosRepos);
+
+    // Filtrar e ordenar repositórios por tópico e data
+    const reposFiltrados = todosRepos.filter(repo => {
+        if (repo.topics) {
+            return repo.topics.includes(topico);
+        }
+        return false; // Para repositórios que não têm a propriedade topics
+    }).sort((a, b) => {
+        const dateA = new Date(a.updated_at || a.last_activity_at);
+        const dateB = new Date(b.updated_at || b.last_activity_at);
+        return dateB - dateA; // Ordem decrescente
+    });
+
+    exibirRepos(reposFiltrados);
 }
 
 function exibirRepos(repos) {
