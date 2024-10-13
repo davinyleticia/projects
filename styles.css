@@ -1,10 +1,10 @@
 * {
     box-sizing: border-box;
-    margin: 0;button
+    margin: 0;
     padding: 0;
 }
 
-p, li, pre, ul, span, h4, button {
+p, li, pre, ul, span, h4, h5, button {
     padding: 10px !important;
     font-size: 1.5rem !important;
 }
@@ -206,7 +206,7 @@ footer p {
         height: auto;
     }
 
-    p, li, pre, ul, span, h4, button {
+    p, li, pre, ul, span, h4, h5, button {
         padding: 10px !important;
         font-size: .7rem !important;
     }
@@ -223,10 +223,6 @@ footer p {
     }
     .content-readme{
         padding: 0 !important;
-    }
-
-    #{
-        margin: 0;
     }
 
     .avatar img {
