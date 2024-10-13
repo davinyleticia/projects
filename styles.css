@@ -4,6 +4,10 @@
     padding: 0;
 }
 
+p {
+    padding: 10px !important;
+}
+
 body {
     font-family: Arial, sans-serif;
     display: flex;
@@ -187,5 +191,9 @@ footer p {
 
     #pagination button {
         margin-bottom: 10px;
+    }
+
+    li {
+        flex-direction: column;
     }
 }
