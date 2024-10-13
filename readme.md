@@ -53,7 +53,7 @@ https://projects.vidal.press
 - **Paginação**: Permite navegar entre páginas de repositórios, com 10 repositórios por página.
 - **Links Diretos**: Links clicáveis que levam diretamente aos repositórios.
 - **Leitura do readme.md**: direto do site.
-- **só exibir repo com topicos `Projects`**
+- **só exibir repo com topicos `Projects`** : Assim vc pode escolher qual aparace na listagem.
 
 
 ## 🤝 Contribuição
