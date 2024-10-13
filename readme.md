@@ -18,7 +18,7 @@ Este projeto foi criado para ajudar desenvolvedores a visualizar todos os seus r
 1. **Clone o repositório**:
 
    ```bash
-   git clone https://github.com/davinyleticia/nome-do-repositorio.git
+   git clone https://github.com/davinyleticia/projects-git.git
    ```
 
 2. **Navegue até o diretório do projeto**:
