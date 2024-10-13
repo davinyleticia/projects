@@ -97,6 +97,10 @@ main {
 
 #readme-content{
     padding: 47px 18px;
+}
+
+.content-readme{
+    padding: 0 40px !important;
     background-color: white;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
