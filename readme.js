@@ -32,7 +32,8 @@ async function carregarReadme() {
 
         // Adiciona o HTML convertido ao elemento
         document.getElementById('readme-content').innerHTML = htmlReadme;
-
+        document.getElementById('readme-repo').href = `https://github.com/${username}/${repoName}`;
+        
     } catch (error) {
         // Exibe a mensagem de erro
         document.getElementById('readme-content').textContent = error.message;
