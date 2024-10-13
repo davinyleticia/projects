@@ -52,6 +52,8 @@ https://projects.vidal.press
 - **Avatar e Nome do Usuário**: Exibe o avatar e nome do usuário do GitHub no cabeçalho.
 - **Paginação**: Permite navegar entre páginas de repositórios, com 10 repositórios por página.
 - **Links Diretos**: Links clicáveis que levam diretamente aos repositórios.
+- **Leitura do readme.md**: direto do site.
+- **só exibir repo com topicos `Projects`**
 
 
 ## 🤝 Contribuição
