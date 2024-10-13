@@ -163,9 +163,7 @@ main {
         font-size: 14px;
     }
 
-    #pagination {
-        flex-direction: column;
-    }
+
 
     #pagination button {
         margin-bottom: 10px;
