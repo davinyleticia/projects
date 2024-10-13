@@ -86,13 +86,17 @@ main {
     padding: 10px;
 }
 
+.nav-readme a:hover {
+    text-decoration: underline;
+}
+
 .main-readme{
     padding: 0 52px !important;
 
 }
 
 #readme-content{
-    padding: 30px;
+    padding: 47px 18px;
     background-color: white;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
