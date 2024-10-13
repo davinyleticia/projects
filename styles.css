@@ -1,23 +1,11 @@
+/* Reset e estilos básicos */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-p, li, pre, ul, span, h4, h5, button {
-    padding: 10px !important;
-    font-size: 1.5rem !important;
-}
-h1 {
-    padding: 10px !important;
-    font-size: 2.5rem !important;
-}
-
-h2 {
-    padding: 10px !important;
-    font-size: 2rem !important;
-}
-
+/* Estilos globais */
 body {
     font-family: Arial, sans-serif;
     display: flex;
@@ -25,11 +13,11 @@ body {
     color: #333;
 }
 
+/* Cabeçalho */
 header {
     background-color: #24292e;
     color: white;
     padding: 30px;
-
 }
 
 .header-nav {
@@ -38,7 +26,6 @@ header {
     align-items: center;
     justify-content: center;
     text-align: center;
-
 }
 
 .avatar img {
@@ -60,6 +47,7 @@ header {
     padding: 0 1px;
 }
 
+/* Sidebar */
 aside {
     width: 250px;
     background-color: #e1e1e1;
@@ -79,58 +67,34 @@ nav ul li a {
     color: #333;
 }
 
+/* Conteúdo principal */
 main {
     flex: 1;
     padding: 20px !important;
 }
 
-.nav-readme{
-    position: fixed;
-    background-color: #333;
-    padding: 5px 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-
-}
-
-.nav-readme a {
-    color: white;
-    text-decoration: none;
-    padding: 10px;
-}
-
-.nav-readme a:hover {
-    text-decoration: underline;
-}
-
-.main-readme{
+/* Estilos para a seção de README */
+.main-readme {
     padding: 0 52px !important;
-
 }
 
-#readme-content{
+#readme-content {
     padding: 47px 18px;
 }
 
-.content-readme{
+.content-readme {
     padding: 0 40px !important;
     background-color: white;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+/* Lista de repositórios */
 #repo-list {
     list-style-type: none;
     margin-top: 20px;
 }
-pre{
-    background-color: #f4f4f4;
-    padding: 15px 10px !important;
-    border-radius: 5px;
-    overflow-x: auto;
-}
+
 #repo-list li {
     background-color: white;
     padding: 15px;
@@ -151,24 +115,11 @@ pre{
     text-decoration: none;
 }
 
-#readme-repo{
-    margin: 0 40px !important;
-
-}
-
-#readme-repo a {
-    color: #0366d6;
-    text-decoration: none;
-}
-
-#readme-repo a:hover {
-    text-decoration: underline;
-}
-
 #repo-list li span a:hover {
     text-decoration: underline;
 }
 
+/* Paginação */
 #pagination {
     display: flex;
     justify-content: space-between;
@@ -193,6 +144,8 @@ pre{
 #pagination span {
     font-size: 16px;
 }
+
+/* Rodapé */
 footer {
     background-color: #24292e;
     color: white;
@@ -214,33 +167,24 @@ footer a:hover {
 footer p {
     margin: 0;
     padding: 1rem;
-}   
+}
 
+/* Responsividade */
 @media (max-width: 768px) {
     body {
         flex-direction: column;
     }
+
     header {
         padding: 20px;
         height: auto;
     }
 
-    p, li, pre, ul, span, h4, h5, button {
-        padding: 10px !important;
-        font-size: .7rem !important;
-    }
-    h1 {
-        font-size: 1.5rem !important;
-    }
-    
-    h2 {
-        font-size: 1rem !important;
-    }
-
-    .main-readme{
+    .main-readme {
         padding: 0 !important;
     }
-    .content-readme{
+
+    .content-readme {
         padding: 0 !important;
     }
 
@@ -277,9 +221,6 @@ footer p {
         margin-bottom: 10px;
     }
 
-    li {
-        flex-direction: column;
-    }
     .nav-readme {
         width: 100%;
     }
