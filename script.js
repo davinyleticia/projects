@@ -1,6 +1,6 @@
 const githubUsername = 'davinyleticia'; // Substitua pelo seu usuário do GitHub
 const gitlabUsername = 'davinyleticia'; // Substitua pelo seu usuário do GitLab
-const reposPorPagina = 15;
+const reposPorPagina = 12;
 let paginaAtual = 1;
 const topico = 'projects'; // Tópico a ser filtrado
 
