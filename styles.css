@@ -110,7 +110,12 @@ main {
     list-style-type: none;
     margin-top: 20px;
 }
-
+pre{
+    background-color: #f4f4f4;
+    padding: 15px 10px !important;
+    border-radius: 5px;
+    overflow-x: auto;
+}
 #repo-list li {
     background-color: white;
     padding: 15px;
