@@ -4,36 +4,47 @@ const reposPorPagina = 12;
 let paginaAtual = 1;
 const topico = 'projects'; // Tópico a ser filtrado
 
+
+
 async function buscarRepos() {
-    // Buscar repositórios do GitHub
-    const githubResponse = await fetch(`https://api.github.com/users/${githubUsername}/repos`);
-    const githubData = await githubResponse.json();
+    try {
+        // Buscar repositórios do GitHub
+        const githubResponse = await fetch(`https://api.github.com/users/${githubUsername}/repos?per_page=100`);
+        const githubData = await githubResponse.json();
 
-    // Buscar repositórios do GitLab
-    const gitlabResponse = await fetch(`https://gitlab.com/api/v4/users/${gitlabUsername}/projects`);
-    const gitlabData = await gitlabResponse.json();
 
-    // Definir o avatar e o nome do usuário do GitHub
-    document.getElementById('github-avatar').src = `https://avatars.githubusercontent.com/${githubUsername}`;
-    document.getElementById('github-name').textContent = githubUsername;
+        // Buscar repositórios do GitLab
+        const gitlabResponse = await fetch(`https://gitlab.com/api/v4/users/${gitlabUsername}/projects`);
+        const gitlabData = await gitlabResponse.json();
 
-    // Combinar repositórios de ambas as plataformas
-    const todosRepos = [...githubData, ...gitlabData];
 
-    // Filtrar e ordenar repositórios por tópico e data
-    const reposFiltrados = todosRepos.filter(repo => {
-        if (repo.topics) {
-            return repo.topics.includes(topico);
-        }
-        return false; // Para repositórios que não têm a propriedade topics
-    }).sort((a, b) => {
-        const dateA = new Date(a.updated_at || a.last_activity_at);
-        const dateB = new Date(b.updated_at || b.last_activity_at);
-        return dateB - dateA; // Ordem decrescente
-    });
+        // Definir o avatar e o nome do usuário do GitHub
+        document.getElementById('github-avatar').src = `https://avatars.githubusercontent.com/${githubUsername}`;
+        document.getElementById('github-name').textContent = githubUsername;
 
-    exibirRepos(reposFiltrados);
+        // Combinar repositórios de ambas as plataformas
+        const todosRepos = [...githubData, ...gitlabData];
+
+        // Filtrar e ordenar repositórios por tópico e data
+        const reposFiltrados = todosRepos.filter(repo => {
+            // GitHub usa 'topics' e GitLab usa 'tag_list'
+            const topics = repo.topics || repo.tag_list || [];
+            return topics.includes(topico);
+        }).sort((a, b) => {
+            const dateA = new Date(a.updated_at || a.last_activity_at);
+            const dateB = new Date(b.updated_at || b.last_activity_at);
+            return dateB - dateA; // Ordem decrescente
+        });
+
+
+        exibirRepos(reposFiltrados);
+    } catch (error) {
+        console.error('Erro ao buscar repositórios:', error);
+    }
 }
+
+
+
 
 function exibirRepos(repos) {
     const repoList = document.getElementById('repo-list');
