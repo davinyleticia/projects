@@ -75,4 +75,3 @@ Para dúvidas ou sugestões, entre em contato:
 
 ---
 ✨ **Divirta-se explorando seus repositórios!** ✨
-```
