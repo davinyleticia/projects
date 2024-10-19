@@ -1,4 +1,6 @@
-# Repositórios do GitHub e GitLab
+# Projects-Git
+
+Listagem de repositórios do Github e Gitlab
 
 🌟 **Bem-vindo ao projeto de listagem de repositórios!** 🌟
 
@@ -73,4 +75,3 @@ Para dúvidas ou sugestões, entre em contato:
 
 ---
 ✨ **Divirta-se explorando seus repositórios!** ✨
-```
