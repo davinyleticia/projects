@@ -95,13 +95,13 @@ main {
 
 }
 
-.nav-readme a {
+.nav-readme a, #url-website {
     color: white;
     text-decoration: none;
     padding: 10px;
 }
 
-.nav-readme a:hover {
+.nav-readme a:hover, #url-website:hover {
     text-decoration: underline;
 }
 
