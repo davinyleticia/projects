@@ -23,7 +23,7 @@ async function buscarRepos() {
 
         // Definir o avatar e o nome do usuário do GitHub
         document.getElementById('github-avatar').src = `https://avatars.githubusercontent.com/${githubUsername}`;
-        document.getElementById('github-name').textContent = `@${username}`;
+        document.getElementById('github-name').textContent = ${username};
 
         // Combinar repositórios de ambas as plataformas
         const todosRepos = [...githubData, ...gitlabData];
