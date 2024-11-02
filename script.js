@@ -9,7 +9,7 @@ const topico = 'projects'; // Tópico a ser filtrado
 
 
 
-async function buscarRepos() {
+async function buscarRepos(username) {
     try {
         // Buscar repositórios do GitHub
         const githubResponse = await fetch(`https://api.github.com/users/${githubUsername}/repos?per_page=100`);
@@ -94,4 +94,4 @@ document.getElementById('next').onclick = () => {
 };
 
 // Carregar repositórios ao iniciar
-buscarRepos();
+buscarRepos(username);
