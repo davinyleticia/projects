@@ -1,6 +1,6 @@
 const githubUsername = 'davinyleticia'; // Substitua pelo seu usuário do GitHub
 const gitlabUsername = 'davinyleticia'; // Substitua pelo seu usuário do GitLab
-const username = 'Daviny Letícia Vidal'
+document.getElementById('github-name').textContent = 'Daviny Letícia Vidal'
 document.getElementById('name').textContent = 'Letícia'; // Substitua pelo seu nome
 document.getElementById('url-website').href = `https://vidal.press/`;
 const reposPorPagina = 12;
@@ -9,7 +9,7 @@ const topico = 'projects'; // Tópico a ser filtrado
 
 
 
-async function buscarRepos(username) {
+async function buscarRepos() {
     try {
         // Buscar repositórios do GitHub
         const githubResponse = await fetch(`https://api.github.com/users/${githubUsername}/repos?per_page=100`);
@@ -23,7 +23,7 @@ async function buscarRepos(username) {
 
         // Definir o avatar e o nome do usuário do GitHub
         document.getElementById('github-avatar').src = `https://avatars.githubusercontent.com/${githubUsername}`;
-        document.getElementById('github-name').textContent = username;
+
 
         // Combinar repositórios de ambas as plataformas
         const todosRepos = [...githubData, ...gitlabData];
@@ -94,4 +94,4 @@ document.getElementById('next').onclick = () => {
 };
 
 // Carregar repositórios ao iniciar
-buscarRepos(username);
+buscarRepos();
