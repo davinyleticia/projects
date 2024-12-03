@@ -31,7 +31,7 @@ body {
 }
 
 header {
-    background-color: #24292e;
+    background-color: #546d78;
     color: white;
     padding: 30px;
 
@@ -81,7 +81,7 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: #333;
+    color: #546d78;
 }
 
 main {
@@ -91,7 +91,7 @@ main {
 
 .nav-readme{
     position: fixed;
-    background-color: #333;
+    background-color: #546d78;
     padding: 5px 0;
     display: flex;
     justify-content: space-between;
@@ -128,7 +128,8 @@ main {
 
 #repo-list {
     list-style-type: none;
-    margin-top: 20px;
+    margin-top: 6px;
+    width: 1000px;
 }
 pre{
     background-color: #f4f4f4;
@@ -176,9 +177,10 @@ pre{
 
 #pagination {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     margin-top: 20px;
+    width: 960px;
 }
 
 #pagination button {
@@ -199,7 +201,7 @@ pre{
     font-size: 16px;
 }
 footer {
-    background-color: #24292e;
+    background-color: #546d78;
     color: white;
     text-align: center;
     padding: 10px;
@@ -220,6 +222,11 @@ footer p {
     margin: 0;
     padding: 1rem;
 }   
+
+
+#prev:hover, #next:hover {
+    background-color: rgba(39, 39, 18, 0.8);
+}
 
 @media (max-width: 768px) {
     body {
