@@ -1,4 +1,4 @@
-# Projects-Git
+# GitPeek
 
 Listagem de repositórios do Github e Gitlab
 
