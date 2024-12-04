@@ -276,6 +276,9 @@ footer p {
     main {
         padding: 10px;
     }
+    #repo-list{
+        width: 100%
+    }
 
     #repo-list li {
         padding: 10px;
@@ -284,7 +287,9 @@ footer p {
     #repo-list li span {
         font-size: 14px;
     }
-
+    #pagination{
+        width: 100%;
+    }
     #pagination button {
         margin-bottom: 10px;
     }
