@@ -6,6 +6,7 @@ document.getElementById('url-website').href = `https://vidal.press/`;
 const reposPorPagina = 12;
 let paginaAtual = 1;
 const topico = 'projects'; // Tópico a ser filtrado
+const siteExternal = "site-external"
 
 
 
@@ -65,9 +66,15 @@ function exibirRepos(repos) {
         const repo = repos[i];
         const listItem = document.createElement('li');
         const repoName = repo.name;
-        listItem.innerHTML = `<span><a href="readme.html?repo=${repoName}">${repo.name || repo.path}</a></span><span>${repo.updated_at ? `Atualizado em: ${new Date(repo.updated_at || repo.last_activity_at).toLocaleDateString()}` : ''}</span>`;
-        repoList.appendChild(listItem);
+
+        if (repo.topics.includes(siteExternal)){
+            listItem.innerHTML = `<span><a href=${repo.homepage}>${repo.name || repo.path}</a></span><span>${repo.updated_at ? `Atualizado em: ${new Date(repo.updated_at || repo.last_activity_at).toLocaleDateString()}` : ''}</span>`;
+            repoList.appendChild(listItem);
+        }else
+            listItem.innerHTML = `<span><a href="readme.html?repo=${repoName}">${repo.name || repo.path}</a></span><span>${repo.updated_at ? `Atualizado em: ${new Date(repo.updated_at || repo.last_activity_at).toLocaleDateString()}` : ''}</span>`;
+            repoList.appendChild(listItem);
     }
+    
 
     // Atualiza a contagem de repositórios
     document.getElementById('repo-count').textContent = totalRepos;
