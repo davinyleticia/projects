@@ -1,6 +1,6 @@
 const githubUsername = 'davinyleticia'; // Substitua pelo seu usuário do GitHub
 const gitlabUsername = 'davinyleticia'; // Substitua pelo seu usuário do GitLab
-document.getElementById('github-name').textContent = 'Daviny Letícia Vidal'
+document.getElementById('github-name').textContent = 'Dáviny Letícia Vidal'
 document.getElementById('name').textContent = 'Letícia'; // Substitua pelo seu nome
 document.getElementById('url-website').href = `https://vidal.press/`;
 const reposPorPagina = 12;
