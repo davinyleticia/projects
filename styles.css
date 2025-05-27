@@ -23,6 +23,10 @@ h3 {
     font-size: 1.9rem !important;
 }
 
+img{
+    width: 100%
+}
+
 body {
     font-family: Arial, sans-serif;
     display: flex;
