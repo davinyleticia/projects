@@ -136,12 +136,12 @@ main {
     margin-top: 6px;
     width: 1000px;
 }
-pre{
+/* pre{
     background-color: #f4f4f4;
     padding: 15px 10px !important;
     border-radius: 5px;
     overflow-x: auto;
-}
+} */
 #repo-list li {
     background-color: white;
     padding: 15px;
