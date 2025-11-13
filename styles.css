@@ -4,9 +4,9 @@
     padding: 0;
 }
 
-p, li, pre, ul, span, h4, h5, button {
+/* p, li, pre, ul, span, h4, h5, button {
     padding: 10px !important;
-    font-size: 1.5rem !important;
+    font-size: 1.5rem !important; */
 }
 h1 {
     padding: 10px !important;
