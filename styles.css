@@ -1,200 +1,332 @@
-* {
+/* =========================================================================
+   ESTRUTURA COMPLETA DE ESTILOS CSS
+   ========================================================================= */
+
+/* --- 1. Reset Global e Box Model --- */
+*, *::before, *::after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-/* p, li, pre, ul, span, h4, h5, button {
-    padding: 10px !important;
-    font-size: 1.5rem !important; */
-}
-h1 {
-    padding: 10px !important;
-    font-size: 2.5rem !important;
-}
-
-h2 {
-    padding: 10px !important;
-    font-size: 2rem !important;
-}
-
-h3 {
-    padding: 10px !important;
-    font-size: 1.9rem !important;
-}
-
-img{
-    width: 100%
+/* --- 2. Variáveis (Theme) --- */
+:root {
+    --color-primary: #546d78;        /* Azul escuro/cinza principal (Header/Títulos) */
+    --color-accent: #0366d6;         /* Azul para links/botões (GitHub blue) */
+    --color-text: #333;              /* Cor de texto principal */
+    --color-background: #f4f4f4;     /* Fundo da página */
+    --color-light-background: #e1e1e1; /* Fundo da sidebar */
+    --color-code-background: #f4f4f4; /* Fundo de blocos de código */
+    --spacing-xs: 8px;
+    --spacing-sm: 10px;
+    --spacing-md: 15px;
+    --spacing-lg: 20px;
+    --font-size-base: 1.3rem;
+    --font-size-lg: 1.5rem;
 }
 
 body {
     font-family: Arial, sans-serif;
+    color: var(--color-text);
+    background-color: var(--color-background);
+    /* 6. Layout Principal (Flexbox) */
     display: flex;
-    background-color: #f4f4f4;
-    color: #333;
+    min-height: 100vh;
 }
 
+
+/* =========================================================================
+   ESTILIZAÇÃO DE CONTEÚDO (SIMULAÇÃO MARKDOWN)
+   ========================================================================= */
+
+/* --- 3. Tipografia e Elementos de Conteúdo --- */
+p, li, span, button {
+    padding: var(--spacing-sm);
+    font-size: var(--font-size-base);
+}
+
+p {
+    margin-bottom: var(--spacing-md);
+}
+
+h1, h2, h3, h4, h5 {
+    padding: var(--spacing-sm);
+    margin-bottom: var(--spacing-xs);
+    color: var(--color-text);
+}
+
+h1 {
+    font-size: 2.7rem;
+}
+
+h2 {
+    font-size: 2rem;
+    border-bottom: 1px solid var(--color-light-background);
+    margin-top: var(--spacing-lg);
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin-top: var(--spacing-md);
+}
+
+/* Listas */
+ul {
+    list-style-type: disc;
+    margin-left: 30px;
+    padding-left: var(--spacing-sm) !important;
+    margin-bottom: var(--spacing-md);
+}
+
+li {
+    margin-bottom: var(--spacing-xs);
+    padding: 0 !important;
+    font-size: var(--font-size-base);
+}
+
+/* Links */
+a {
+    text-decoration: none;
+    color: var(--color-accent);
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Linha Divisória */
+hr {
+    border: none;
+    border-top: 1px solid var(--color-light-background);
+    margin: var(--spacing-lg) 0;
+}
+
+/* Imagens */
+img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: var(--spacing-md);
+    border-radius: 4px;
+}
+
+/* --- 4. Tabelas --- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: var(--spacing-lg);
+}
+
+table th, table td {
+    padding: var(--spacing-sm);
+    text-align: left;
+    border: 1px solid #ddd;
+    font-size: var(--font-size-base);
+}
+
+/* --- 5. Código e Pre-formatado --- */
+code {
+    background-color: var(--color-code-background);
+    padding: 2px 4px;
+    border-radius: 4px;
+    font-size: var(--font-size-base);
+    color: #c7254e;
+}
+
+pre {
+    background-color: var(--color-code-background);
+    padding: var(--spacing-md);
+    border-radius: 5px;
+    overflow-x: auto;
+    font-size: var(--font-size-base);
+    margin-bottom: var(--spacing-md);
+}
+
+code pre {
+    padding: 0 !important;
+    background-color: transparent !important;
+}
+
+
+/* =========================================================================
+   LAYOUT DA APLICAÇÃO (HEADER, ASIDE, MAIN, FOOTER)
+   ========================================================================= */
+
+/* --- 7. Cabeçalho (Header) --- */
 header {
-    background-color: #546d78;
-    color: white;
+    background-color: #dad4d4;
+    text-align: center;
+    color: #000000;
     padding: 30px;
-
+    margin-bottom: var(--spacing-lg);
 }
+
+header a {
+    text-decoration: none;
+    color: inherit;
+}
+
+header a:hover {
+    text-decoration: underline;
+}   
 
 .header-nav {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     text-align: center;
-
 }
 
 .avatar img {
     border-radius: 50%;
     width: 80px;
     height: 80px;
-    padding: 0 1px;
+    padding: 0 !important;
+    border: 3px solid white;
 }
 
 .info h1 {
-    margin-bottom: 10px;
     font-size: 24px;
-    padding: 0 1px;
+    padding: 0 !important;
+    margin: var(--spacing-xs) 0;
 }
 
 .info p {
-    margin: 0;
     font-size: 16px;
-    padding: 0 1px;
+    padding: 0 !important;
+    margin: 0;
 }
 
+
+/* --- 8. Sidebar (Aside) --- */
 aside {
     width: 250px;
-    background-color: #e1e1e1;
-    padding: 20px;
+    min-width: 200px;
+    background-color: var(--color-light-background);
+    padding: var(--spacing-lg);
+    flex-shrink: 0;
+    flex-grow: 0;
 }
 
 nav ul {
     list-style-type: none;
+    padding: 0;
 }
 
 nav ul li {
-    margin-bottom: 15px;
+    margin-bottom: var(--spacing-xs);
 }
 
 nav ul li a {
-    text-decoration: none;
-    color: #546d78;
+    color: var(--color-primary);
+    display: block;
+    padding: var(--spacing-xs);
+    border-radius: 3px;
 }
 
+nav ul li a:hover {
+    text-decoration: none;
+    background-color: rgba(84, 109, 120, 0.1);
+}
+
+/* --- 9. Conteúdo Principal (Main) --- */
 main {
     flex: 1;
-    padding: 20px !important;
+    padding: var(--spacing-lg);
+    background-color: #cccccc   ;
 }
 
-.nav-readme{
-    position: fixed;
-    background-color: #546d78;
-    padding: 5px 0;
+.nav-readme {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-
-
+    gap: var(--spacing-md);
+    top: var(--spacing-lg);
+    left: 50%;
+    transform: translateX(-50%);
+    color: white  !important;
+    margin-bottom: var(--spacing-lg);
+    position: fixed;
+    background-color: rgb(81, 76, 76);
+    padding: var(--spacing-sm) var(--spacing-md);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    z-index: 1000;
 }
 
-.nav-readme a, #url-website {
-    color: white;
+.nav-readme a {
+    color: white  !important;
     text-decoration: none;
-    padding: 10px;
-}
+    font-size: var(--font-size-base);
+}   
 
-.nav-readme a:hover, #url-website:hover {
+.nav-readme a:hover {
     text-decoration: underline;
 }
 
-.main-readme{
-    padding: 0 52px !important;
 
-}
 
-#readme-content{
-    padding: 47px 18px;
-}
-
-.content-readme{
-    max-width:1490px;
-    padding: 0 40px !important;
-    background-color: white;
+.content-readme {
+    max-width: 1490px;
+    margin: 3rem auto;
+    background-color: #f3eeee;
+    color: black;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+
 }
 
+/* Repositories List */
 #repo-list {
     list-style-type: none;
-    margin-top: 6px;
-    width: 1000px;
+    padding: 0;
+    margin-top: var(--spacing-md);
+    max-width: 1000px;
 }
-/* pre{
-    background-color: #f4f4f4;
-    padding: 15px 10px !important;
-    border-radius: 5px;
-    overflow-x: auto;
-} */
+
 #repo-list li {
-    background-color: white;
-    padding: 15px;
-    margin-bottom: 10px;
+    background-color: #dad4d4;
+    padding: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
     border-radius: 5px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-size: var(--font-size-base) !important;
+    padding: var(--spacing-md) !important;
 }
 
 #repo-list li span {
-    font-size: 16px;
+    font-size: var(--font-size-base);
+    color: var(--color-text);
 }
 
-#repo-list li span a {
-    color: #0366d6;
-    text-decoration: none;
-}
+#repo-list li a {
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+}   
 
-#readme-repo{
-    margin: 0 40px !important;
-
-}
-
-#readme-repo a {
-    color: #0366d6;
-    text-decoration: none;
-}
-
-#readme-repo a:hover {
+#repo-list li a:hover {
     text-decoration: underline;
-}
+}   
 
-#repo-list li span a:hover {
-    text-decoration: underline;
-}
-
+/* Pagination */
 #pagination {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 20px;
-    width: 960px;
+    margin-top: var(--spacing-lg);
 }
 
 #pagination button {
-    background-color: #0366d6;
+    background-color: var(--color-accent);
     color: white;
     border: none;
-    padding: 10px 15px;
+    padding: var(--spacing-sm) var(--spacing-md);
     border-radius: 5px;
     cursor: pointer;
+    font-size: var(--font-size-base);
+    margin: 0 var(--spacing-xs);
 }
 
 #pagination button:disabled {
@@ -202,63 +334,78 @@ main {
     cursor: not-allowed;
 }
 
-#pagination span {
-    font-size: 16px;
+#pagination button:hover:not(:disabled) {
+    background-color: #0352b6;
 }
+
+/* --- 10. Rodapé (Footer) --- */
 footer {
-    background-color: #546d78;
-    color: white;
+    background-color: #dad4d4;
+    color: black;
     text-align: center;
-    padding: 10px;
-    margin-top: 20px;
+    padding: var(--spacing-sm);
+    margin-top: var(--spacing-lg);
 }
+
+footer p, footer a{
+    margin: var(--spacing-xs) 0;
+    font-size: var(--font-size-base) !important;
+}
+
 
 footer a {
-    color: white;
-    text-decoration: none;
-    padding: 1rem;
+    color: black;
 }
-
 footer a:hover {
     text-decoration: underline;
 }
 
-footer p {
-    margin: 0;
-    padding: 1rem;
-}   
 
-
-#prev:hover, #next:hover {
-    background-color: rgba(39, 39, 18, 0.8);
-}
+/* =========================================================================
+   RESPONSIVIDADE (MOBILE)
+   ========================================================================= */
 
 @media (max-width: 768px) {
+    /* Mudar o layout principal para coluna */
     body {
         flex-direction: column;
     }
-    header {
-        padding: 20px;
-        height: auto;
+
+    /* Sidebar move para cima e ocupa a largura total */
+    aside {
+        width: 100%;
+        min-width: unset;
+        order: -1; /* Coloca a sidebar antes do conteúdo principal */
+        padding: var(--spacing-md);
     }
 
-    p, li, pre, ul, span, h4, h5, button {
-        padding: 10px !important;
-        font-size: .7rem !important;
+    /* Main ocupa a largura total */
+    main {
+        padding: var(--spacing-md);
     }
+
+    /* Ajustar tamanhos de fonte para telas menores */
+    :root {
+        --font-size-base: 0.9rem;
+        --font-size-lg: 1rem;
+    }
+
     h1 {
+        font-size: 2rem !important;
+    }
+
+    h2 {
         font-size: 1.5rem !important;
     }
-    
-    h2 {
-        font-size: 1rem !important;
+
+    p, li, span, button {
+        padding: 0 !important;
+        font-size: var(--font-size-base) !important;
     }
 
-    .main-readme{
-        padding: 0 !important;
-    }
-    .content-readme{
-        padding: 0 !important;
+    /* Header/Avatar */
+    header {
+        padding: var(--spacing-md);
     }
 
     .avatar img {
@@ -274,35 +421,22 @@ footer p {
         font-size: 14px;
     }
 
-    aside {
-        width: 200px;
+    /* Readme Content */
+    .content-readme {
+        padding: var(--spacing-md);
     }
 
-    main {
-        padding: 10px;
-    }
-    #repo-list{
-        width: 100%
+    /* Repos */
+    #repo-list {
+        max-width: 100%;
     }
 
     #repo-list li {
-        padding: 10px;
-    }
-
-    #repo-list li span {
-        font-size: 14px;
-    }
-    #pagination{
-        width: 100%;
-    }
-    #pagination button {
-        margin-bottom: 10px;
-    }
-
-    li {
         flex-direction: column;
+        align-items: flex-start;
     }
-    .nav-readme {
+
+    #pagination {
         width: 100%;
     }
 }
