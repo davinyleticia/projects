@@ -163,6 +163,21 @@ code pre {
 }
 
 
+.level-item {
+    padding: 1rem 0 !important;
+}
+
+.level-item span {
+    padding: 0 !important;
+
+}
+
+
+.footer-social-icons {
+    margin-top: 1rem !important;
+
+}
+
 /* =========================================================================
    LAYOUT DA APLICAÇÃO (HEADER, ASIDE, MAIN, FOOTER)
    ========================================================================= */
