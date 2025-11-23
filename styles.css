@@ -3,7 +3,9 @@
    ========================================================================= */
 
 /* --- 1. Reset Global e Box Model --- */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -11,12 +13,18 @@
 
 /* --- 2. Variáveis (Theme) --- */
 :root {
-    --color-primary: #546d78;        /* Azul escuro/cinza principal (Header/Títulos) */
-    --color-accent: #0366d6;         /* Azul para links/botões (GitHub blue) */
-    --color-text: #333;              /* Cor de texto principal */
-    --color-background: #f4f4f4;     /* Fundo da página */
-    --color-light-background: #e1e1e1; /* Fundo da sidebar */
-    --color-code-background: #f4f4f4; /* Fundo de blocos de código */
+    --color-primary: #546d78;
+    /* Azul escuro/cinza principal (Header/Títulos) */
+    --color-accent: #0366d6;
+    /* Azul para links/botões (GitHub blue) */
+    --color-text: #333;
+    /* Cor de texto principal */
+    --color-background: #f4f4f4;
+    /* Fundo da página */
+    --color-light-background: #e1e1e1;
+    /* Fundo da sidebar */
+    --color-code-background: #f4f4f4;
+    /* Fundo de blocos de código */
     --spacing-xs: 8px;
     --spacing-sm: 10px;
     --spacing-md: 15px;
@@ -40,7 +48,10 @@ body {
    ========================================================================= */
 
 /* --- 3. Tipografia e Elementos de Conteúdo --- */
-p, li, span, button {
+p,
+li,
+span,
+button {
     padding: var(--spacing-sm);
     font-size: var(--font-size-base);
 }
@@ -49,7 +60,11 @@ p {
     margin-bottom: var(--spacing-md);
 }
 
-h1, h2, h3, h4, h5 {
+h1,
+h2,
+h3,
+h4,
+h5 {
     padding: var(--spacing-sm);
     margin-bottom: var(--spacing-xs);
     color: var(--color-text);
@@ -116,7 +131,8 @@ table {
     margin-bottom: var(--spacing-lg);
 }
 
-table th, table td {
+table th,
+table td {
     padding: var(--spacing-sm);
     text-align: left;
     border: 1px solid #ddd;
@@ -167,7 +183,7 @@ header a {
 
 header a:hover {
     text-decoration: underline;
-}   
+}
 
 .header-nav {
     display: flex;
@@ -178,8 +194,8 @@ header a:hover {
 
 .avatar img {
     border-radius: 50%;
-    width: 80px;
-    height: 80px;
+    width: 200px;
+    height: 200px;
     padding: 0 !important;
     border: 3px solid white;
 }
@@ -232,7 +248,7 @@ nav ul li a:hover {
 main {
     flex: 1;
     padding: var(--spacing-lg);
-    background-color: #cccccc   ;
+    background-color: #cccccc;
 }
 
 .nav-readme {
@@ -242,7 +258,7 @@ main {
     top: var(--spacing-lg);
     left: 50%;
     transform: translateX(-50%);
-    color: white  !important;
+    color: white !important;
     margin-bottom: var(--spacing-lg);
     position: fixed;
     background-color: rgb(81, 76, 76);
@@ -253,10 +269,10 @@ main {
 }
 
 .nav-readme a {
-    color: white  !important;
+    color: white !important;
     text-decoration: none;
     font-size: var(--font-size-base);
-}   
+}
 
 .nav-readme a:hover {
     text-decoration: underline;
@@ -304,11 +320,11 @@ main {
 #repo-list li a {
     color: rgb(0, 0, 0);
     font-weight: bold;
-}   
+}
 
 #repo-list li a:hover {
     text-decoration: underline;
-}   
+}
 
 /* Pagination */
 #pagination {
@@ -348,7 +364,8 @@ footer {
     margin-top: var(--spacing-lg);
 }
 
-footer p, footer a{
+footer p,
+footer a {
     margin: var(--spacing-xs) 0;
     font-size: var(--font-size-base) !important;
 }
@@ -357,6 +374,7 @@ footer p, footer a{
 footer a {
     color: black;
 }
+
 footer a:hover {
     text-decoration: underline;
 }
@@ -367,6 +385,7 @@ footer a:hover {
    ========================================================================= */
 
 @media (max-width: 768px) {
+
     /* Mudar o layout principal para coluna */
     body {
         flex-direction: column;
@@ -376,7 +395,8 @@ footer a:hover {
     aside {
         width: 100%;
         min-width: unset;
-        order: -1; /* Coloca a sidebar antes do conteúdo principal */
+        order: -1;
+        /* Coloca a sidebar antes do conteúdo principal */
         padding: var(--spacing-md);
     }
 
@@ -399,7 +419,10 @@ footer a:hover {
         font-size: 1.5rem !important;
     }
 
-    p, li, span, button {
+    p,
+    li,
+    span,
+    button {
         padding: 0 !important;
         font-size: var(--font-size-base) !important;
     }
@@ -411,13 +434,13 @@ footer a:hover {
 
     .nav-readme {
         width: 60%;
-    justify-content: center ;
+        justify-content: center;
     }
 
     #pagination button {
-        padding: var(--spacing-xs) var(--spacing-sm) !important ;
-        font-size: var(--font-size-base) !important ;
-        
+        padding: var(--spacing-xs) var(--spacing-sm) !important;
+        font-size: var(--font-size-base) !important;
+
     }
 
     /* Header/Avatar */
@@ -426,8 +449,8 @@ footer a:hover {
     }
 
     .avatar img {
-        width: 60px;
-        height: 60px;
+        width: 150px;
+        height: 150px;
     }
 
     .info h1 {
