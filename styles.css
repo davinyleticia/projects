@@ -404,6 +404,22 @@ footer a:hover {
         font-size: var(--font-size-base) !important;
     }
 
+    ul {
+        margin: 0 !important;
+        padding: 0 10px !important;
+    }
+
+    .nav-readme {
+        width: 60%;
+    justify-content: center ;
+    }
+
+    #pagination button {
+        padding: var(--spacing-xs) var(--spacing-sm) !important ;
+        font-size: var(--font-size-base) !important ;
+        
+    }
+
     /* Header/Avatar */
     header {
         padding: var(--spacing-md);
