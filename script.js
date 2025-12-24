@@ -43,7 +43,7 @@ async function buscarRepos() {
 
         exibirRepos(reposFiltrados);
     } catch (error) {
-        console.error('Erro ao buscar repositórios:', error);
+        console.error('Erro ao buscar repositórios: ( tente mais tarde )', error);
     }
 }
 
