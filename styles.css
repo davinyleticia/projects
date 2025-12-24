@@ -266,6 +266,12 @@ main {
     background-color: #cccccc;
 }
 
+main p {
+    font-size: var(--font-size-lg) !important;
+    padding: 0 !important;
+    margin: 1rem 3rem 2rem 3rem;
+}
+
 .nav-readme {
     display: flex;
     align-items: center;
@@ -419,6 +425,10 @@ footer a:hover {
     main {
         padding: var(--spacing-md);
     }
+
+    main p {
+    margin: 1rem 1rem 2rem 1rem;
+}
 
     /* Ajustar tamanhos de fonte para telas menores */
     :root {
